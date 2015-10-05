@@ -1,0 +1,6 @@
+{
+  "name": "IconBar",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./IconBar.js"
+}

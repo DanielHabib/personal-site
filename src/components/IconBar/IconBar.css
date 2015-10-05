@@ -1,0 +1,16 @@
+.icon-span {
+    display: table-cell;
+    text-align: center;
+    padding-left: 2em;
+}
+
+#IconBar-container {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    position: absolute;
+    bottom: 0;
+    border-top:solid;
+    border-width: 1px;
+    border-color: #CCCCCC;
+}
