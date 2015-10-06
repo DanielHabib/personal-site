@@ -7,7 +7,7 @@
 }
 
 .Header {
-  background: #373277;
+  background: none;
   color: #fff;
 }
 
@@ -25,6 +25,7 @@
 
 .Header-brandTxt {
   margin-left: 10px;
+  font-size: 2em;
 }
 
 .Header-nav {

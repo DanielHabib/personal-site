@@ -9,6 +9,7 @@ class MainLabel extends Component {
 
     return !this.props.error ? (
       <div id="MainLabel-container">
+        <h1 id="Mainh1">{this.props.text}</h1>
       </div>
     ) : this.props.children;
   }
