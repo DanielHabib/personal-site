@@ -11,7 +11,7 @@ class Icon extends Component {
   render() {
     var imageurl = this.props.image;
     return !this.props.error ? (
-      <div id="">
+      <div className="Icon-Container hvr-rotate">
         <a href={this.props.url} title={this.props.alt}>
           {this.props.children}
         </a>
