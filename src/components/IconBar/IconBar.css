@@ -5,12 +5,10 @@
 }
 
 #IconBar-container {
-    width: 100%;
-    display: table;
+    width: 80%;
+    display: none;
     table-layout: fixed;
     position: absolute;
+    margin-left: 5em;
     bottom: 0;
-    border-top:solid;
-    border-width: 1px;
-    border-color: #CCCCCC;
 }

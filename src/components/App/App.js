@@ -5,6 +5,7 @@ import withStyles from '../../decorators/withStyles';
 import Header from '../Header';
 import IconBar from '../IconBar';
 import MainLabel from '../MainLabel';
+import Menu from '../Menu';
 
 @withContext
 @withStyles(styles)
@@ -19,8 +20,8 @@ class App extends Component {
     return !this.props.error ? (
       <div>
         <Header name="Daniel Habib" />
-        <MainLabel text="Wuts ^" />
-        <IconBar />
+        <Menu />
+        
       </div>
     ) : this.props.children;
   }

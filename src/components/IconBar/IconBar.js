@@ -19,7 +19,7 @@ class IconBar extends Component {
     };
 
     return !this.props.error ? (
-      <div id="IconBar-container">
+      <div id="IconBar-container" className="IconBar-container">
         <span className="icon-span">
             <Icon url={iconList.github} alt="Github">
               <img className="Icon-Image" src={require('./GitHub-Mark.png')} alt="Github" width="60" height="60"/>

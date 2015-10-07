@@ -1,0 +1,25 @@
+#Menu-container{
+    width:80%;
+    height:50%;
+    left: 20%;
+    top:25%;
+    display: table;
+    table-layout: fixed;
+    position: absolute;
+    bottom: 0;
+    border-top:solid;
+    border-width: 1px;
+    border-color: #CCCCCC;
+}
+
+#menu-span {
+    display: table-cell;
+    text-align: center;
+    padding-top: 2em;
+    vertical-align: middle;
+}
+
+.listOrganizer {
+    display: table-row;
+}
+

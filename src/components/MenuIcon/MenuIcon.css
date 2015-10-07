@@ -1,0 +1,8 @@
+
+.MenuIconContainer{
+    display: table-cell;
+    text-align: center;
+    padding-top: 2em;
+    vertical-align: middle;
+}
+
