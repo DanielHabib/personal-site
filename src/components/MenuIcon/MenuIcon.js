@@ -7,7 +7,7 @@ class MenuIcon extends Component {
 
   render() {
     return !this.props.error ? (
-      <div className="MenuIconContainer" onMouseOver={this.props.hoverOn} >
+      <div className="MenuIconContainer hvr-float-shadow" onMouseOver={this.props.hoverOn} >
         <a href={this.props.url} title={this.props.alt}>
           {this.props.children}
         </a>

@@ -3,12 +3,12 @@ import styles from './Menu.css';
 import withStyles from '../../decorators/withStyles';
 import MenuIcon from '../MenuIcon';
 import IconBar from '../IconBar';
+import WorldMap from '../WorldMap';
+import VacationList from '../VacationList';
 import $ from 'jquery';
 
 @withStyles(styles)
 class Menu extends Component {
-
-
 
     constructor() {
         super();
@@ -18,8 +18,8 @@ class Menu extends Component {
     };
 
     socialHoverOn() {
+        this.mapHoverOff();
         var iconBar = $('#IconBar-container');
-        console.log(this.state.flag);
         if (this.state.flag){
             return;
         }
@@ -27,30 +27,50 @@ class Menu extends Component {
             iconBar.css('display', 'table');
             iconBar.addClass("IconBar-container");
             this.state.flag = true;
+
             setTimeout(this.flipFlag.bind(this), 800);
         }
         else{
             iconBar.removeClass("IconBar-container");
         }
     }
+
     flipFlag(){
         this.state.flag = false;
     }
+
     mapHoverOn() {
         this.socialHoverOff();
+        var worldMap = $('.WorldMap-container');
+
+        if (worldMap.css('display')==='none'){
+            worldMap.css('display', 'inline');
+            console.log(worldMap.attr('class'));
+
+        }
+
     }
+
     blogHoverOn() {
         this.socialHoverOff();
+        this.mapHoverOff();
     }
+
     appsHoverOn() {
         this.socialHoverOff();
+        this.mapHoverOff();
     }
+
+    mapHoverOff() {
+
+        var worldMap = $('.WorldMap-container');
+        worldMap.css('display', 'none');
+    }
+
     socialHoverOff() {
         var iconBar = $('#IconBar-container');
         iconBar.css('display', 'none');
         iconBar.removeClass("IconBar-container");
-        console.log("out");
-        console.log(iconBar.attr('class'));
     }
 
   render() {
@@ -75,11 +95,13 @@ class Menu extends Component {
                 <MenuIcon url="" title="" hoverOn={this.mapHoverOn.bind(this)}>
                     <img className="Menu-Icon-Image" src={require('./map-pin.png')} alt="map" width="80" height="80"/>
                 </MenuIcon>
+                <WorldMap />
+                <VacationList />
             </span>
         </li>
         <li className="listOrganizer" >
             <span className="menu-span">
-                <MenuIcon url="" title=""  hoverOn={this.socialHoverOn.bind(this)} >
+                <MenuIcon url="" title="" id="SocialIcon" hoverOn={this.socialHoverOn.bind(this)} >
                     <img className="Menu-Icon-Image" src={require('./social-icon.png')} alt="apps" width="80" height="80"/>
                 </MenuIcon>
                 <IconBar />

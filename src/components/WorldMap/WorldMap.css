@@ -1,0 +1,79 @@
+@import '../variables.css';
+
+.WorldMap-container {
+  display: none;
+  right:0;
+  position: relative;
+}
+figure {
+  width: 25%;
+  right: 30%;
+  top: 25%;
+  max-width: 80vh;
+  position: fixed;
+}
+figure #sea {
+  fill: #9BC4EB;
+}
+figure #hi {
+  fill: rgba(255, 255, 255, 0.2);
+}
+figure #light {
+  fill: white;
+}
+figure #shad {
+  fill: rgba(0, 0, 0, 0.05);
+}
+figure #land {
+  fill: #8B9C52;
+  animation: spin 100s linear infinite forwards;
+}
+figure .vehicles use {
+  fill: #F0FBFC;
+  animation: orbit 15s linear infinite;
+  transform-origin: center center;
+}
+figure #boat1 {
+  transform: translateX(40px) translateY(-80px);
+}
+figure #boat1 use {
+  animation-duration: 30s;
+}
+figure #plane1 {
+  transform: translateX(-10px) translateY(170px);
+}
+figure #plane2 {
+  transform: translateX(170px) translateY(150px);
+}
+figure #plane2 use {
+  animation-delay: 7.5s;
+}
+figure #plane3 {
+  transform: translateX(140px) translateY(-50px);
+}
+figure #plane3 use {
+  animation-delay: 1.25s;
+  animation-duration: 12s;
+}
+figure #bike1 {
+  transform: translateX(50px) translateY(190px);
+}
+figure #bike1 use {
+  animation-duration: 25s;
+}
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(-160px);
+  }
+  to {
+    transform: rotate(360deg) translateX(-160px);
+  }
+}
+@keyframes spin {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}

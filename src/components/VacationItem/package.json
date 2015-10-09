@@ -1,0 +1,6 @@
+{
+  "name": "VacationItem",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./VacationItem.js"
+}

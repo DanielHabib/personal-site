@@ -21,7 +21,6 @@ class App extends Component {
       <div>
         <Header name="Daniel Habib" />
         <Menu />
-        
       </div>
     ) : this.props.children;
   }
